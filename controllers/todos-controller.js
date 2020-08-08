@@ -18,7 +18,7 @@ const todosController = {
   show(req, res) {
     Todo.getById(req.params.id)
       .then(todo => {
-        res.json({
+        res.render('todos/todo', {
           message: 'ok',
           todo,
         });

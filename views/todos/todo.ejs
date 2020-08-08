@@ -1,0 +1,19 @@
+<%- include ('../partials/boilerplate') %>
+
+<div class="info-container">
+  <div class="todo-info">
+    <h3><%= todo.title %></h3>
+    <p><b>Status:</b> <%= todo.is_complete ? 'Done' : 'Not Done' %></p>
+    <p><b>Category:</b> <%= todo.category %></p>
+    <p><b>Description:</b> <%= todo.description %></p>
+  </div>
+  <div class="todo-btns">
+    <a href="#">Mark Complete</a>
+    <a href="#">Edit</a>
+    <button method="POST" action="/todos/<%= todo.id %>?_method=DELETE">
+      Delete
+    </button>
+  </div>
+</div>
+
+<%- include ('../partials/end') %>

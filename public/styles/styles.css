@@ -63,10 +63,17 @@ body {
 
 .todo-btns {
   display: flex;
-  flex-direction: row;
 }
 
-.todo-btns a {
+button {
+  background: none;
+  font-family: 'Noto Sans TC', sans-serif;
+  color: #333;
+  cursor: pointer;
+}
+
+.todo-btns a,
+button {
   margin-left: 0.5rem;
   text-decoration: none;
   text-transform: uppercase;
@@ -75,11 +82,33 @@ body {
   font-size: 0.8rem;
 }
 
-.todo-btns a:visited {
+.todo-btns a:visited,
+a {
   color: #333;
 }
 
-.todo-btns a:hover {
+.todo-btns a:hover,
+button:hover {
   background-color: #003742;
   color: whitesmoke;
+}
+
+/* Individual Todos Page */
+
+.info-container {
+  margin: 2rem auto;
+  width: 700px;
+  max-width: 95vw;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  border: 2px solid #333;
+}
+
+.todo-info {
+  margin-bottom: 1.2rem;
+}
+
+.info-conatiner.todo-btns {
+  margin-top: 1rem;
 }
