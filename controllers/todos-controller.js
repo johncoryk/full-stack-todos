@@ -45,6 +45,34 @@ const todosController = {
         res.status(500).json({ err, message: err.message });
       });
   },
+
+  update(req, res) {
+    Todo.getById(req.params.id)
+      .then(todo => {
+        return todo.update(req.body);
+      })
+      .then(updatedTodo => {
+        res.redirect(`/todos/${updatedTodo.id}`);
+      })
+      .catch(err => {
+        console.log(err);
+        res.status(500).json({ err, message: err.message });
+      });
+  },
+
+  delete(req, res) {
+    Todo.getById(req.params.id)
+      .then(todo => {
+        return todo.delete();
+      })
+      .then(() => {
+        res.redirect('/todos');
+      })
+      .catch(err => {
+        console.log(err);
+        res.status(500).json({ err, message: err.message });
+      });
+  },
 };
 
 module.exports = todosController;

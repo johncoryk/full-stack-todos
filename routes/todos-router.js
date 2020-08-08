@@ -5,5 +5,7 @@ todosRouter.get('/', todosController.index);
 todosRouter.post('/', todosController.create);
 
 todosRouter.get('/:id', todosController.show);
+todosRouter.put('/:id', todosController.update);
+todosRouter.delete('/:id', todosController.delete);
 
 module.exports = todosRouter;

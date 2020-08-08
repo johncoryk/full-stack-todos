@@ -53,6 +53,30 @@ class Todo {
         return Object.assign(this, todo);
       });
   }
+
+  update(changes) {
+    Object.assign(this, changes);
+    return db
+      .oneOrNone(
+        `
+      UPDATE todos SET
+        tite = $/title/,
+        category = $/category/,
+        description = $/description/,
+        is_complete = $/is_complete/
+      WHERE id = $/id/
+      RETURNING *
+    `,
+        this
+      )
+      .then(todo => {
+        return Object.assign(this, todo);
+      });
+  }
+
+  delete() {
+    return db.oneOrNone('DELETE FROM todos WHERE id = $1', this.id);
+  }
 }
 
 module.exports = Todo;
