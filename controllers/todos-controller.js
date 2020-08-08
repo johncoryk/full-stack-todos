@@ -4,9 +4,9 @@ const todosController = {
   index(req, res) {
     Todo.getAll()
       .then(todos => {
-        res.json({
+        res.render('todos/index', {
           message: 'ok',
-          todos,
+          data: { todos },
         });
       })
       .catch(err => {

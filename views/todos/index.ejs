@@ -1,0 +1,13 @@
+<%- include ('../partials/boilerplate') %>
+
+<div class="todos">
+  <% for (let todo of data.todos) { %>
+  <div class="todo">
+    <h3><%= todo.title %></h3>
+    <p><%= todo.description %></p>
+    <p><%= todo.category %></p>
+  </div>
+  <% } %>
+</div>
+
+<%- include ('../partials/end') %>
