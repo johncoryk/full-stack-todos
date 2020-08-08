@@ -10,12 +10,17 @@ app.use(methodOverride('_method'));
 app.use(morgan('common'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+app.set('views', 'views');
+app.set('view engine', 'ejs');
+app.use(express.static('public'));
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Listening on port ${PORT}`));
 
 app.get('/', (req, res) => {
-  res.send('Home');
+  res.render('index', {
+    appName: 'todos',
+  });
 });
 
 app.use('/todos', todosRouter);
