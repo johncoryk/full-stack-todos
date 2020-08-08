@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Noto Sans TC', sans-serif;
+  color: #333;
+  background-color: whitesmoke;
+}
+
+.todos {
+  margin: 2rem auto;
+  width: 700px;
+  max-width: 95vw;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+}
+
+.todo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid #333;
+  margin-bottom: 1.5rem;
+}
+
+.todo-top {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 0.5rem;
+  background-color: #003742;
+  align-items: baseline;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1rem;
+}
+
+.top-text {
+  color: whitesmoke;
+}
+
+.top-text h3 {
+  font-size: 1.4rem;
+}
+
+.todo-bottom {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  padding: 0.2rem 1rem 0.5rem;
+  align-items: baseline;
+}
+
+.todo-bottom p {
+  text-transform: uppercase;
+}
+
+.todo-btns {
+  display: flex;
+  flex-direction: row;
+}
+
+.todo-btns a {
+  margin-left: 0.5rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: solid 2px #333;
+  padding: 0.3rem 0.5rem;
+  font-size: 0.8rem;
+}
+
+.todo-btns a:visited {
+  color: #333;
+}
+
+.todo-btns a:hover {
+  background-color: #003742;
+  color: whitesmoke;
+}

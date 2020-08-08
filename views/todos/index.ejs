@@ -3,9 +3,18 @@
 <div class="todos">
   <% for (let todo of data.todos) { %>
   <div class="todo">
-    <h3><%= todo.title %></h3>
-    <p><%= todo.description %></p>
-    <p><%= todo.category %></p>
+    <div class="todo-top">
+      <h3 class="top-text"><%= todo.title %></h3>
+      <p class="top-text">Todo Item</p>
+    </div>
+    <div class="todo-bottom">
+      <p><%= todo.category %></p>
+      <div class="todo-btns">
+        <a href="#">Info</a>
+        <a href="#">Edit</a>
+        <a href="#">Delete</a>
+      </div>
+    </div>
   </div>
   <% } %>
 </div>
