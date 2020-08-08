@@ -22,6 +22,21 @@ class Todo {
         });
       });
   }
+
+  static getById(id) {
+    return db
+      .oneOrNone(
+        `
+      SELECT * FROM todos
+      WHERE id = $1;
+    `,
+        id
+      )
+      .then(todo => {
+        if (todo) return new this(todo);
+        throw new Error('Todo not found!');
+      });
+  }
 }
 
 module.exports = Todo;
