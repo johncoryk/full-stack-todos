@@ -28,6 +28,23 @@ const todosController = {
         res.status(500).json({ err, message: err.message });
       });
   },
+
+  create(req, res) {
+    new Todo({
+      title: req.body.title,
+      category: req.body.category,
+      description: req.body.description,
+      is_complete: req.body.is_complete,
+    })
+      .save()
+      .then(() => {
+        res.redirect('/todos');
+      })
+      .catch(err => {
+        console.log(err);
+        res.status(500).json({ err, message: err.message });
+      });
+  },
 };
 
 module.exports = todosController;

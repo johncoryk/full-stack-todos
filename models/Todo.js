@@ -1,12 +1,12 @@
 const db = require('../db/config');
 
 class Todo {
-  constructor({ id, title, category, description, isComplete }) {
+  constructor({ id, title, category, description }) {
     this.id = id || null;
     this.title = title;
     this.category = category;
     this.description = description;
-    this.isComplete = false;
+    this.is_complete = false;
   }
 
   static getAll() {
@@ -35,6 +35,22 @@ class Todo {
       .then(todo => {
         if (todo) return new this(todo);
         throw new Error('Todo not found!');
+      });
+  }
+
+  save() {
+    return db
+      .one(
+        `
+      INSERT INTO todos
+      (title, category, description, is_complete)
+      VALUES ($/title/, $/category/, $/description/, $/is_complete/)
+      RETURNING *
+    `,
+        this
+      )
+      .then(todo => {
+        return Object.assign(this, todo);
       });
   }
 }
