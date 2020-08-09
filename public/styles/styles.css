@@ -12,6 +12,30 @@ body {
   background-color: whitesmoke;
 }
 
+.home-page {
+  width: 100%;
+  margin: 9rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-page h1 {
+  font-size: 3rem;
+}
+
+.home-page a {
+  margin-top: 2rem;
+  border: 2px solid #333;
+  padding: 0.5rem 3rem;
+}
+
+.home-page a:hover {
+  background-color: #003742;
+  color: whitesmoke;
+}
+
 .todos {
   margin: 2rem auto;
   width: 700px;
