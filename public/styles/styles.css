@@ -129,3 +129,26 @@ button:hover {
   background-color: #003742;
   color: whitesmoke;
 }
+
+/* Add todos */
+
+.add-todo-container {
+  margin: 2rem auto;
+  width: 700px;
+  max-width: 95vw;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  border: 2px solid #333;
+}
+
+.add-todo-container form input,
+.add-todo-container form textarea {
+  display: block;
+  margin-bottom: 0.5rem;
+  background: none;
+  border: 2px solid #333;
+  padding: 0.5rem;
+  width: 100%;
+  font-family: 'Noto Sans TC', sans-serif;
+}

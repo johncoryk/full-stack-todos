@@ -1,0 +1,15 @@
+<%- include ('../partials/boilerplate') %>
+
+<div class="add-todo-container">
+  <form method="POST" action="/todos">
+    <input name="title" type="text" placeholder="Title" />
+    <input name="category" type="text" placeholder="Category" />
+    <textarea name="description" type="text" placeholder="Description" /></textarea>
+    <button class="todo-btns" type="submit">Add Todo</button>
+  </form>
+</div>
+<div class="back">
+  <a class="back-btn" href="/todos/">See All Todos</a>
+</div>
+
+<%- include ('../partials/end') %>
