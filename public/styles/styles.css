@@ -115,7 +115,7 @@ button:hover {
 
 .back {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
 }
 
 .back-btn {
