@@ -8,7 +8,7 @@
     <p><b>Description:</b> <%= todo.description %></p>
   </div>
   <div class="todo-btns">
-    <a href="#">Edit</a>
+    <a href="/todos/<%= todo.id %>/edit">Edit</a>
     <form method="POST" action="/todos/<%= todo.id %>?_method=DELETE">
       <button>Delete</button>
     </form>

@@ -15,13 +15,11 @@ const todosController = {
       });
   },
 
-  show(req, res) {
+  show(req, res, next) {
     Todo.getById(req.params.id)
       .then(todo => {
-        res.render('todos/todo', {
-          message: 'ok',
-          todo,
-        });
+        res.locals.todo = todo;
+        next();
       })
       .catch(err => {
         console.log(err);

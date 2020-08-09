@@ -60,7 +60,7 @@ class Todo {
       .oneOrNone(
         `
       UPDATE todos SET
-        tite = $/title/,
+        title = $/title/,
         category = $/category/,
         description = $/description/,
         is_complete = $/is_complete/

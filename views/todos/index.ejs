@@ -11,7 +11,7 @@
       <p><%= todo.category %></p>
       <div class="todo-btns">
         <a href="/todos/<%= todo.id %>">Info</a>
-        <a href="#">Edit</a>
+        <a href="/todos/<%= todo.id %>/edit">Edit</a>
         <form method="POST" action="/todos/<%= todo.id %>?_method=DELETE">
           <button>Delete</button>
         </form>
