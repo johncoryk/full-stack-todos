@@ -72,19 +72,19 @@ button {
   cursor: pointer;
 }
 
+a,
+a:visited {
+  color: #333;
+  text-decoration: none;
+}
+
 .todo-btns a,
 button {
   margin-left: 0.5rem;
-  text-decoration: none;
   text-transform: uppercase;
   border: solid 2px #333;
   padding: 0.3rem 0.5rem;
   font-size: 0.8rem;
-}
-
-.todo-btns a:visited,
-a {
-  color: #333;
 }
 
 .todo-btns a:hover,
@@ -111,4 +111,21 @@ button:hover {
 
 .info-conatiner.todo-btns {
   margin-top: 1rem;
+}
+
+.back {
+  display: flex;
+  justify-content: center;
+}
+
+.back-btn {
+  border: solid 2px #333;
+  padding: 0.3rem 3.5rem;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+
+.back-btn:hover {
+  background-color: #003742;
+  color: whitesmoke;
 }

@@ -6,7 +6,7 @@ const todosController = {
       .then(todos => {
         res.render('todos/index', {
           message: 'ok',
-          data: { todos },
+          todos,
         });
       })
       .catch(err => {

@@ -8,12 +8,14 @@
     <p><b>Description:</b> <%= todo.description %></p>
   </div>
   <div class="todo-btns">
-    <a href="#">Mark Complete</a>
     <a href="#">Edit</a>
-    <button method="POST" action="/todos/<%= todo.id %>?_method=DELETE">
-      Delete
-    </button>
+    <form method="POST" action="/todos/<%= todo.id %>?_method=DELETE">
+      <button>Delete</button>
+    </form>
   </div>
+</div>
+<div class="back">
+  <a class="back-btn" href="/todos/">See All Todos</a>
 </div>
 
 <%- include ('../partials/end') %>

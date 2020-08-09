@@ -1,7 +1,7 @@
 <%- include ('../partials/boilerplate') %>
 
 <div class="todos">
-  <% for (let todo of data.todos) { %>
+  <% for (let todo of todos) { %>
   <div class="todo">
     <div class="todo-top">
       <h3 class="top-text"><%= todo.title %></h3>
@@ -12,7 +12,9 @@
       <div class="todo-btns">
         <a href="/todos/<%= todo.id %>">Info</a>
         <a href="#">Edit</a>
-        <a href="#">Delete</a>
+        <form method="POST" action="/todos/<%= todo.id %>?_method=DELETE">
+          <button>Delete</button>
+        </form>
       </div>
     </div>
   </div>
