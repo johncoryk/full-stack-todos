@@ -1,22 +1,24 @@
 <%- include ('../partials/boilerplate') %>
 
-<div class="info-container">
-  <div class="todo-info">
-    <h3><%= todo.title %></h3>
-    <p><b>Status:</b> <%= todo.is_complete ? 'Done' : 'Not Done' %></p>
-    <p><b>Category:</b> <%= todo.category %></p>
-    <p><b>Description:</b> <%= todo.description %></p>
+<div class="main-contain">
+  <div class="info-container">
+    <div class="todo-info">
+      <h3><%= todo.title %></h3>
+      <p><b>Status:</b> <%= todo.is_complete ? 'Done' : 'Not Done' %></p>
+      <p><b>Category:</b> <%= todo.category %></p>
+      <p><b>Description:</b> <%= todo.description %></p>
+    </div>
+    <div class="todo-btns">
+      <a href="/todos/<%= todo.id %>/edit">Edit</a>
+      <form method="POST" action="/todos/<%= todo.id %>?_method=DELETE">
+        <button>Delete</button>
+      </form>
+    </div>
   </div>
-  <div class="todo-btns">
-    <a href="/todos/<%= todo.id %>/edit">Edit</a>
-    <form method="POST" action="/todos/<%= todo.id %>?_method=DELETE">
-      <button>Delete</button>
-    </form>
+  <div class="back">
+    <a class="back-btn" href="/todos/">See All Todos</a>
+    <a class="back-btn" href="/todos/add">Add Todo</a>
   </div>
-</div>
-<div class="back">
-  <a class="back-btn" href="/todos/">See All Todos</a>
-  <a class="back-btn" href="/todos/add">Add Todo</a>
 </div>
 
 <%- include ('../partials/end') %>

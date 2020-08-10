@@ -1,15 +1,17 @@
 <%- include ('../partials/boilerplate') %>
 
-<div class="add-todo-container">
-  <form method="POST" action="/todos/<%= todo.id %>?_method=PUT">
-    <input name="title" type="text" value="<%= todo.title %>" />
-    <input name="category" type="text" value="<%= todo.category %>" />
-    <input name="description" type="text" value="<%= todo.description %>" /></input>
-    <button class="todo-btns" type="submit">Update Todo</button>
-  </form>
-</div>
-<div class="back">
-  <a class="back-btn" href="/todos/">See All Todos</a>
+<div class="main-contain">
+  <div class="add-todo-container">
+    <form method="POST" action="/todos/<%= todo.id %>?_method=PUT">
+      <input name="title" type="text" value="<%= todo.title %>" />
+      <input name="category" type="text" value="<%= todo.category %>" />
+      <input name="description" type="text" value="<%= todo.description %>" /></input>
+      <button class="todo-btns" type="submit">Update Todo</button>
+    </form>
+  </div>
+  <div class="back">
+    <a class="back-btn" href="/todos/">See All Todos</a>
+  </div>
 </div>
 
 <%- include ('../partials/end') %>
