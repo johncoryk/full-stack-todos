@@ -160,6 +160,17 @@ button:hover {
   color: whitesmoke;
 }
 
+.radio {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: baseline;
+  margin-bottom: 1.5rem;
+}
+
+.radio label {
+  flex: 0 0 80%;
+}
+
 /* Add todos */
 .add-todo-container {
   margin: 2rem auto;

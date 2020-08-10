@@ -32,7 +32,6 @@ const todosController = {
       title: req.body.title,
       category: req.body.category,
       description: req.body.description,
-      is_complete: req.body.is_complete,
     })
       .save()
       .then(() => {
